@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature App</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+</head>
+<body>
+
+<h1>Temperature Data</h1>
+
+<form id="temperatureForm">
+    <label for="temperature">Temperature:</label>
+    <input type="number" step="0.01" name="value" id="temperature" required>
+    <button type="submit">Save Temperature</button>
+</form>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Temperature Value</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody id="temperatureTableBody"></tbody>
+</table>
+
+<script src="change-temperatures.js"></script>
+</body>
+</html>
